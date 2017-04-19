@@ -1,0 +1,163 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.slider .roll .roll-i,
+.slider .roll,
+.slider {
+    position: relative;
+    margin: 0;
+    height: 640px;
+    width:100%;
+    z-index: 1;
+}
+
+.slider .roll{
+    overflow: hidden;
+}
+/*幻灯片切换的样式*/
+.slider .roll .roll-i{
+    opacity: 0;
+    position: absolute;
+    right: 50%;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+}
+.slider .roll .roll-i_active{
+    opacity: 1;
+    right: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.slider .roll .roll-i img,
+.slider .roll .roll-i a{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/*控制按钮区样式*/
+.slider .ctrl {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    z-index: 9;
+}
+.slider .ctrl .ctrl-i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    margin: 8px;
+}
+
+.slider .ctrl .ctrl-i a {
+    color: transparent;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+/*当前控制按钮样式*/
+.slider .ctrl .ctrl-i_active a{
+    border: 1px solid #fff;
+    background: transparent;
+    width: 10px;
+    height: 10px;
+}
+/* hover 控制按钮的样式*/
+.slider .ctrl .ctrl-i a:hover {
+    border: 1px solid #fff;
+    background: transparent;
+    width: 10px;
+    height: 10px;
+    transition: all 0.2s ease-in-out;
+}
+/* 上下页按钮样式 */
+.roll-pre {
+    visibility: hidden;
+    opacity:0;
+    position: absolute;
+    top: 300px;
+    left: -51px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    z-index: 3;
+    transition: all 0.4s ease-in-out;
+    
+}
+
+
+.roll-next {
+    visibility: hidden;
+    opacity:0;
+    position: absolute;
+    top: 300px;
+    right: -51px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    z-index: 3;
+    transition: all 0.4s ease-in-out;
+   
+}
+/*上下页按钮hover*/
+.slider:hover .roll-pre {
+    visibility:visible; 
+    opacity:1;
+    position: absolute;
+    top: 300px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    z-index: 3;
+    transition: all 0.4s ease-in-out;
+    
+}
+.slider:hover .roll-next {
+    visibility:visible; 
+    opacity:1;
+    position: absolute;
+    top: 300px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    z-index: 3;
+    transition: all 0.4s ease-in-out;
+    
+}
+.pre-bottom,
+.next-bottom {
+    width: 52px;
+    height: 52px;
+    display: inline-block;
+    position: relative;
+}
+.pre-bottom i {
+    font-size: 30px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: white;
+}
+.next-bottom i{
+    position: absolute;
+    left: 12px;
+    top: 9px;
+    color: white;
+    font-size: 28px;
+}
